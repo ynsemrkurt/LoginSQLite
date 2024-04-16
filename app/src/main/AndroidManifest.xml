@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LoginSQLite"
         tools:targetApi="31">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.LoginSQLite">
@@ -24,8 +27,7 @@
         </activity>
         <activity
             android:name=".SignActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>
