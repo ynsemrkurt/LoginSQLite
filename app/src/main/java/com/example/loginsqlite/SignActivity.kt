@@ -1,5 +1,6 @@
 package com.example.loginsqlite
 
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
@@ -32,7 +33,7 @@ class SignActivity : AppCompatActivity() {
         } else {
             db = openOrCreateDatabase("users", MODE_PRIVATE, null)
             db.execSQL("CREATE TABLE IF NOT EXISTS users (userId INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, surname TEXT)")
-            val cursor = db.rawQuery("SELECT * FROM users WHERE email=?", arrayOf(email))
+            val cursor: Cursor = db.rawQuery("SELECT * FROM users WHERE email=?", arrayOf(email))
             if (cursor.count > 0) {
                 showToast("User already exists!")
             } else {
