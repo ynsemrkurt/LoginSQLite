@@ -37,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
             val cursor = db.rawQuery("SELECT * FROM users WHERE email = ? AND password = ?", arrayOf(email, password))
             if (cursor.count > 0){
                 showToast("Login successful")
+                startActivity(Intent(this, HomeActivity::class.java))
             }
             else {
                 showToast("Invalid email or password")
