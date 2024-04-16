@@ -2,6 +2,8 @@ package com.example.loginsqlite
 
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,5 +20,26 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         db = openOrCreateDatabase("users", MODE_PRIVATE, null)
+    }
+
+    fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun clickLogin(view: View){
+        val email = binding.emailEditText.text.toString().trim()
+        val password = binding.passwordEditText.text.toString().trim()
+        if (email.isEmpty() || password.isEmpty()) {
+            showToast("Please enter email and password")
+        }
+        else {
+            val cursor = db.rawQuery("SELECT * FROM users WHERE email = ? AND password = ?", arrayOf(email, password))
+            if (cursor.count > 0){
+                showToast("Login successful")
+            }
+            else {
+                showToast("Invalid email or password")
+            }
+        }
     }
 }
