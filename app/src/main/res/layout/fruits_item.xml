@@ -6,21 +6,22 @@
     android:gravity="center">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:cardElevation="9dp"
-        app:cardCornerRadius="20dp"
-        android:cardBackgroundColor="@color/white">
+        app:cardCornerRadius="20dp">
 
         <TextView
+            android:id="@+id/fruitsTextView"
             android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Hello World!"
-            android:textSize="24sp"/>
+            android:textSize="20sp"/>
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>
