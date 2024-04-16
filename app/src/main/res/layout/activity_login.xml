@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:inputType="textEmailAddress"
         android:id="@+id/emailEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -33,6 +34,7 @@
         app:layout_constraintVertical_bias="0.393" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/passwordEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"

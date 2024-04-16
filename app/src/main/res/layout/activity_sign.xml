@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:inputType="textEmailAddress"
         android:id="@+id/emailEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -31,6 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/passwordEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -42,6 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/rePasswordEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -53,6 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
     <EditText
+        android:inputType="textPersonName"
         android:id="@+id/nameEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -64,6 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rePasswordEditText" />
 
     <EditText
+        android:inputType="textPersonName"
         android:id="@+id/surnameEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
