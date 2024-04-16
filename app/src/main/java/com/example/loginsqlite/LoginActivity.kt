@@ -1,5 +1,6 @@
 package com.example.loginsqlite
 
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
@@ -41,5 +42,9 @@ class LoginActivity : AppCompatActivity() {
                 showToast("Invalid email or password")
             }
         }
+    }
+
+    fun clickSign(view: View){
+        startActivity(Intent(this, SignActivity::class.java))
     }
 }
